@@ -1,0 +1,107 @@
+.title h1{
+display: flex;
+font-family: cursive;
+
+}
+/*
+.title h1:hover{
+color: lightgreen;
+animation: ease-in;
+transition: 500ms;
+cursor: pointer;
+word-spacing: 10px;
+}
+
+.title h1:not(:hover){
+color: red;
+animation: ease-out;
+transition: 500ms;
+
+}
+*/
+
+/* animation of moving grids
+https://www.w3schools.com/jsref/prop_style_animation.asp
+
+*/
+.title h1{
+ color: black;
+  
+  }
+
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin: 200px auto;
+    max-width: 250px;
+    
+  }
+  
+  .grid-item {
+    font-family: sans-serif;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #bfbfbf;
+    background-color: white;
+    filter: blur(2px);
+    -webkit-filter: blur(2px);
+
+  }
+  
+  .grid-item.is-active:hover {
+    background-color: blue;
+    filter: blur(0px);
+    -webkit-filter: blur(0px);
+
+  }
+  .grid-item:hover {
+    background-color: blue;
+    filter: blur(0px);
+    -webkit-filter: blur(0px);
+
+  }
+
+  .grid-item.is-active{
+      font-family: sans-serif;
+      text-align: center;
+      padding: 10px;
+      border: 1px solid #bfbfbf;
+      background-color: yellow;
+      filter: blur(0px);
+      -webkit-filter: blur(0px);
+   
+
+  }
+
+   .turnRight{
+    position: relative;
+    animation-name: TurnRight;
+    animation-duration: 4s;
+    animation: TurnRight 4s infinite;
+   }
+   .turnLeft{
+    position: relative;
+    animation-name: Turnleft;
+    animation-duration: 4s;
+    animation: Turnleft 4s infinite;
+  
+  }
+
+
+  @keyframes TurnRight {
+    0%   { left:0px; top:0px;}
+    25%  { left:200px; top:0px;}
+    50%  { left:200px; top:200px;}
+    75%  { left:0px; top:200px;}
+    100% { left:0px; top:0px;}
+  }
+  @keyframes Turnleft {
+    0%   { left:0px; top:0px;}
+    25%  { right:200px; top:0px;}
+    50%  { right:200px; top:200px;}
+    75%  { right:0px; top:200px;}
+    100% { right:0px; top:0px;}
+  }
+
